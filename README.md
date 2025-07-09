@@ -7,11 +7,12 @@
 
 ### 1. Подготовка файла с URL
 Создайте в директории проекта файл `url.txt` и добавьте адреса (по одному на строку):
+
+<pre>
 https://example.com
 https://google.com
 https://invalid-site.test
-
-text
+</pre>
 
 ### 2. Запуск программы
 Выполните в терминале из директории проекта:
@@ -24,13 +25,15 @@ go run main.go
 ```bash
 go run main.go -file path/to/your_urls.txt
 ```
-3. Результаты
+### 3.Результаты
 Программа создаст файл result.txt с отчетом вида:
 
-text
+<pre>
 Error while ping next urls:
 URL: https://invalid-site.test, err: Get "https://invalid-site.test": dial tcp: lookup invalid-site.test: no such host
 
 Successfully pinged: 
 URL: https://example.com, status: 200 OK
 URL: https://google.com, status: 200 OK
+</pre>
+
